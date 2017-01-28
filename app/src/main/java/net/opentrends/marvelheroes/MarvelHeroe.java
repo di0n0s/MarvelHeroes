@@ -1,6 +1,9 @@
 package net.opentrends.marvelheroes;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
+
+import java.util.List;
 
 /**
  * Created by sfcar on 27/01/2017.
@@ -11,13 +14,21 @@ public class MarvelHeroe {
     private int mId;
     private String mName;
     private String mDescription;
-    private boolean mImage; //Hay que cambiarlo luego
+    private String mImage;
+    private int mComicsNumber;
+    private List<MarvelComic> mMarvelComics;
+    private int mEventsNumber;
+    private List<MarvelEvent> mMarvelEvents;
 
     public MarvelHeroe() {
     }
 
     public int getId() {
         return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
     }
 
     public String getName() {
@@ -36,13 +47,45 @@ public class MarvelHeroe {
         mDescription = description;
     }
 
-    public boolean getImage() {
+    public String getImage() {
         return mImage;
-    } //Hay que cambiarlo luego
+    }
 
-    public void setImage(boolean image) {
+    public void setImage(String image) {
         mImage = image;
-    } //Hay que cambiarlo luego
+    }
+
+    public int getComicsNumber() {
+        return mMarvelComics.size();
+    }
+
+    public void setComicsNumber(int comicsNumber) {
+        mComicsNumber = mMarvelComics.size();
+    }
+
+    public List<MarvelComic> getMarvelComics() {
+        return mMarvelComics;
+    }
+
+    public void setMarvelComics(List<MarvelComic> marvelComics) {
+        mMarvelComics = marvelComics;
+    }
+
+    public int getEventsNumber() {
+        return mEventsNumber;
+    }
+
+    public void setEventsNumber(int eventsNumber) {
+        mEventsNumber = eventsNumber;
+    }
+
+    public List<MarvelEvent> getMarvelEvents() {
+        return mMarvelEvents;
+    }
+
+    public void setMarvelEvents(List<MarvelEvent> marvelEvents) {
+        mMarvelEvents = marvelEvents;
+    }
 }
 
 

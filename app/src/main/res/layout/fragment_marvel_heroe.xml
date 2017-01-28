@@ -10,7 +10,7 @@
                     xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-        <CheckBox
+        <ImageView
             android:id="@+id/marvel_heroe_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
