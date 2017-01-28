@@ -3,7 +3,10 @@ package net.opentrends.marvelheroes;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +31,9 @@ public class MarvelHeroeFragment extends Fragment implements View.OnClickListene
     private Button mDetailButton;
     private Button mWikiButton;
     private Button mComicsButton;
+    private TabLayout mTabLayout;
+    private RecyclerView mMarvelComicRecyclerView;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +64,14 @@ public class MarvelHeroeFragment extends Fragment implements View.OnClickListene
         mWikiButton = (Button) view.findViewById(R.id.wiki_button);
         mComicsButton = (Button) view.findViewById(R.id.comics_button);
 
+        mTabLayout = (TabLayout) view.findViewById(R.id.tabs);
+        mTabLayout.addTab(mTabLayout.newTab().setText(R.string.tab_comics));//Añadimos las pestañas
+        mTabLayout.addTab(mTabLayout.newTab().setText(R.string.tab_eventos));
+
+        mMarvelComicRecyclerView = (RecyclerView) view.findViewById(R.id.comics_recycler_view);//Cargamos el RecyclerView
+        mMarvelComicRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity())); //Configuramos el LayoutManager de manera Vertical
+
+        //updateUI();
 
         return view;
     }
@@ -67,13 +81,13 @@ public class MarvelHeroeFragment extends Fragment implements View.OnClickListene
         String message = "Hola";
         switch (v.getId()) {
             case R.id.detail_button:
-                Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.wiki_button:
-                Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.comics_button:
-                Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                 break;
         }
 

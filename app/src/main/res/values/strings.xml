@@ -7,4 +7,6 @@
     <string name="resources">Recursos</string>
     <string name="looking_for">Busca tu súper-héroe</string>
     <string name="looking_for_name">nombre a buscar...</string>
+    <string name="tab_comics">COMICS</string>
+    <string name="tab_eventos">EVENTOS</string>
 </resources>
