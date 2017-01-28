@@ -25,9 +25,9 @@ public class MarvelHeroeSingleton {
         mMarvelHeroes = new ArrayList<>();
         for(int i = 0; i < 100; i++){
             MarvelHeroe mh = new MarvelHeroe();
-            mh.setName("MarvelHeroe #"+ i+1);
-            mh.setDescription("Description #"+ i+1);
-            mh.setImage("");
+            mh.setName("MarvelHeroe #"+ i);
+            mh.setDescription("Description #"+ i);
+            mh.setImage(true);
             mMarvelHeroes.add(mh);
         }
     }
@@ -36,7 +36,7 @@ public class MarvelHeroeSingleton {
         return mMarvelHeroes;
     }
 
-    public MarvelHeroe getHeroe(int id){ //Devuelve los heroe con el ID indicado
+    public MarvelHeroe getMarvelHeroe(int id){ //Devuelve los heroe con el ID indicado
         for(MarvelHeroe marvelHeroe : mMarvelHeroes){
             if(marvelHeroe.getId() == id){
                 return marvelHeroe;

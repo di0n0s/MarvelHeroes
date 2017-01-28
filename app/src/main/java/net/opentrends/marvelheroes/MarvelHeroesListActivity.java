@@ -10,6 +10,6 @@ public class MarvelHeroesListActivity extends SingleFragmentActivity {
     //Activity para albergar el Fragment del Listado de Heroes
     @Override
     protected Fragment createFragment() {
-        return null;
+        return new MarvelHeroesListFragment();
     }
 }

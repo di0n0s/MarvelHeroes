@@ -4,5 +4,7 @@
     <string name="detalle">Detalle</string>
     <string name="wiki">Wiki</string>
     <string name="comics">Comics</string>
-    <string name="recursos">Recursos</string>
+    <string name="resources">Recursos</string>
+    <string name="looking_for">Busca tu súper-héroe</string>
+    <string name="looking_for_name">nombre a buscar...</string>
 </resources>

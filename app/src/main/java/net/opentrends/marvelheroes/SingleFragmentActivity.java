@@ -19,7 +19,7 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         Fragment fragment = fm.findFragmentById(R.id.fragment_container); //Solicitamos a FragmentManager el fragment por su ID de vista contenedora
 
         if(fragment == null){ //Si ningún fragment se corresponde con el ID...
-            fragment = createFragment(); //Se crea un nuevo CrimeFragment
+            fragment = createFragment(); //Se crea un nuevo MarveHeroeFragment
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit(); //Crea una transacción de Fragment que lo añada a la lista, añade el fragment y confirma la transacción
         }
 

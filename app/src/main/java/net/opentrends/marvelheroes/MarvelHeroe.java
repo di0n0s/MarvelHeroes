@@ -1,5 +1,7 @@
 package net.opentrends.marvelheroes;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by sfcar on 27/01/2017.
  */
@@ -9,7 +11,7 @@ public class MarvelHeroe {
     private int mId;
     private String mName;
     private String mDescription;
-    private String mImage;
+    private boolean mImage; //Hay que cambiarlo luego
 
     public MarvelHeroe() {
     }
@@ -34,13 +36,13 @@ public class MarvelHeroe {
         mDescription = description;
     }
 
-    public String getImage() {
+    public boolean getImage() {
         return mImage;
-    }
+    } //Hay que cambiarlo luego
 
-    public void setImage(String image) {
+    public void setImage(boolean image) {
         mImage = image;
-    }
+    } //Hay que cambiarlo luego
 }
 
 
